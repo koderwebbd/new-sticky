@@ -1,0 +1,44 @@
+Header.liquid
+<script>
+  document.documentElement.style.setProperty('--header-heights', `${Math.round(document.getElementById('shopify-section-{{ section.id }}').clientHeight)}px`);
+</script>
+Theme.liquid
+template-{{template.name}}
+CSS CODES
+.template-index [data-sticky-type="always"]{
+    margin-bottom: calc(var(--header-heights) * -1);
+    transition: background .2s,color .2s,border .2s;
+}
+
+
+.template-index [data-sticky-type="always"]:not(:hover):not(.sticky){
+    background: transparent;
+    border-color: transparent;
+}
+.template-index [data-sticky-type="always"]:not(:hover):not(.sticky) .header__menu-item,
+.template-index [data-sticky-type="always"]:not(:hover):not(.sticky) .header__icon {
+    color: #fff;
+}
+
+JS CODES
+/*KoderWeb*/
+window.onscroll = function() {header_scroll()};
+
+var announcementBar = document.querySelector('.announcement-bar');
+var header = document.querySelector('sticky-header');
+var sticky;
+
+if (announcementBar) {
+  sticky = announcementBar.clientHeight;
+}else{
+  sticky = 0;
+}
+
+
+function header_scroll() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
