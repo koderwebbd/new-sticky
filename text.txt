@@ -10,7 +10,6 @@ CSS CODES
     transition: background .2s,color .2s,border .2s;
 }
 
-
 .template-index [data-sticky-type="always"]:not(:hover):not(.sticky){
     background: transparent;
     border-color: transparent;
@@ -18,6 +17,14 @@ CSS CODES
 .template-index [data-sticky-type="always"]:not(:hover):not(.sticky) .header__menu-item,
 .template-index [data-sticky-type="always"]:not(:hover):not(.sticky) .header__icon {
     color: #fff;
+}
+
+.template-index [data-sticky-type="always"]:not(:hover):not(.sticky) .normal-logo{
+  display: none;
+}
+.template-index [data-sticky-type="always"]:hover .transparent-logo,
+.template-index [data-sticky-type="always"].sticky .transparent-logo{
+  display: none;
 }
 
 JS CODES
