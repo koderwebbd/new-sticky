@@ -1,6 +1,6 @@
 Header.liquid
 <script>
-  document.documentElement.style.setProperty('--header-heights', `${Math.round(document.getElementById('shopify-section-{{ section.id }}').clientHeight)}px`);
+  document.documentElement.style.setProperty('--header-heights', `${Math.round(document.getElementById('shopify-section-{{ section.id }}').offsetHeight)}px`);
 </script>
 Theme.liquid
 template-{{template.name}}
