@@ -5,6 +5,11 @@ Header.liquid
 Theme.liquid
 template-{{template.name}}
 CSS CODES
+#shopify-section-header{
+transform: inherit;
+    position: sticky;
+    top: 0;
+}
 .template-index [data-sticky-type="always"]{
     margin-bottom: calc(var(--header-heights) * -1);
     transition: background .2s,color .2s,border .2s;
